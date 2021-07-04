@@ -28,7 +28,7 @@ function passwordMachineGoBrrr() {
     var confirmNumbers = confirm("Would you like Numbers? e.g. 1337");
     var confirmSymbols = confirm("Would you like special characters? e.g. $#!@");
   }  
- 
+  // if all options are false then send user alert
   if (!confirmUpperCase && !confirmLowerCase && !confirmNumbers && !confirmSymbols) {
     alert("Invalid response, password must have at least one type of character, please choose at least one option.");
     return "";
@@ -37,7 +37,7 @@ function passwordMachineGoBrrr() {
   //use concatenation.....example from w3: string.concat(string1, string2, ..., stringX)  
   //if you make the string "" ( not null ) then you can use this to simply get all the values...
   //...of the 4 categories and then you just run a 4 loop to put it all together in the return at the bottom of the entire function
-  //... after that you need to 
+  //... because the password this function generated is a result of the function passwordMachineGoBrrr
   var charCodes = "";
  
   if (confirmUpperCase) {
