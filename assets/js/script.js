@@ -17,31 +17,48 @@ var symbols = ["!#$%&()*+-:;<=>?@[\]^_`{|}~"]
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
-//user input starts function by pressing the generateBtn
+// Add event listener to generate button
+generateBtn.addEventListener("click", writePassword);
 
-//prompts for password criteria 
-        //What length do you want, has to be between 8 and 128 characters
+//start password generator by user pressing button
 
-        //tell the user that they will be able to generate a password with lowercase uppercase numbers and symbols of their choosing, you can choose all, none, or a mix 
 
-        //lowercase? Boolean
+//prompt What length would you like your new password to be? You can pick any length between 8 and 128 characters!
 
-        //uppercase? Boolean
+//if 
+//response is not between 8-128 characters 
+//then
+//alert Invalid response, password length must be 8-128 characters long.
+//break;
 
-        //numeric? Boolean
+//window.confirm Would you like lower case letters? e.g. abcde
 
-        //special characters? Boolean
+//window.confirm Would you like include UPPER CASE letters? e.g. ABCDE
 
-        // if false for all alert user to select at 
+//window.confirm Would you like Numbers? e.g. 1337
+
+//window.confirm Would you like special characters? e.g. $#!@
+
+// if 
+//false for all four options 
+//then
+//alert Invalid response, password must have at least one type of character.
+//break;
 
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
+  //var upperCase 
+  //var lowerCase 
+  //var numbers 
+  //var symbols 
+
   passwordText.value = password;
 
 }
 
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+
+
+// password appears in the form of an alert in textarea
